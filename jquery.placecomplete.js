@@ -1,4 +1,8 @@
-//Author Sébastien Hawkins
+//! jquery.placecomplete.js
+//! version : 0.0.1
+//! authors : Sébastien Hawkins
+//! license : Apache
+
 (function($){
 
     if(typeof $.fn.select2 == 'undefined'){
