@@ -1,3 +1,4 @@
+//Author Sébastien Hawkins
 (function($){
 
     if(typeof $.fn.select2 == 'undefined'){
