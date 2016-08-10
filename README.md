@@ -33,4 +33,5 @@ options.placeServiceResult = function(data,status){}
 //Select2 options
 options.anySelect2Options , ex: options.ajax {} , the select2 ajax options
 
+$('.placecomplete').placecomplete(options);
 ```
