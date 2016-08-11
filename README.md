@@ -5,6 +5,7 @@ Google Maps/Place API for jQuery/Select2
 
 * [Select2](https://select2.github.io/) , tested with version 4.0.3 , (i do not think it will work with version below 4.0)
 * [jQuery](https://jquery.com/) , tested with version 2.2.4
+* `Google Maps API` Loaded on the fly no need to include , make sure you do not have another plugin that load it on the fly it could be loaded twice , but placecomplete will load it only 1 time event if initialize multiple time.
 
 ##Example
 -------
