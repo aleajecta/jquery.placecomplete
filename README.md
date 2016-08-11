@@ -1,5 +1,10 @@
 # jquery.placecomplete
 Google Maps/Place API for jQuery/Select2
+
+##Demo
+
+on [jsFiddle](https://jsfiddle.net/sebastienhawkins/b1ws2h07/)
+
 ##Require
 -------
 
