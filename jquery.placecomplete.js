@@ -36,7 +36,6 @@
     }
 
     //Google placeservice result map
-
     var placeServiceResult = function(data,status){
         var CIVIC = 0, STREET = 1, CITY = 2, SECTEUR = 3, STATE = 4, COUNTRY = 5, ZIPCODE = 6;
         //todo If the result does not have 7 element data map is not the same
@@ -50,6 +49,8 @@
         $('.address input.country').val(adrc[COUNTRY].long_name);
         $('.address input.zipcode').val(adrc[ZIPCODE].long_name);
     }
+	
+	var placeServiceClear = function(){}
 
     //Select2 default options
     var select2DefaultOptions = {
@@ -71,12 +72,14 @@
         },
         ajax:{
             delay:100
-        }
+        },
+        allowClear: true
     };
 
     //jQuery Plugin
     var pluginDefault = {
-        placeServiceResult:placeServiceResult
+        placeServiceResult: placeServiceResult,
+        placeServiceClear: placeServiceClear
     }
     $.fn.placecomplete = function (options) {
         this.each(function () {
@@ -113,6 +116,9 @@
             options = $.extend(true,pluginDefault,options);
             $s2.on('select2:select', function (evt) {
                 ps.getDetails({ placeId: evt.params.data.place_id}, options.placeServiceResult);
+            });
+			$s2.on('select2:clear', function (evt) {
+                options.placeServiceClear();
             });
         });
         return this;
