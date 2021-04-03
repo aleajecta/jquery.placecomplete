@@ -105,7 +105,8 @@
                     processResults: function (data, status) {
                         var response = {results:[]}
                         $.each(data,function(index,item){
-                            item.text = item.description;
+                           item.id = item.place_id;
+                           item.text = item.description;
                            response.results.push(item)
                         });
                         return response;
